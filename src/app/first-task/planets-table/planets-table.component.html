@@ -1,0 +1,31 @@
+<div class="table-wrapper" *ngIf="(planetsInfo | async) ? (planetsInfo | async).length > 0 : false">
+    <table class="planet-table">
+        <thead>
+        <tr>
+            <th>№</th>
+            <ng-container *ngFor="let columnName of columnNames">
+                <th>{{columnName}}</th>
+            </ng-container>
+        </tr>
+        </thead>
+        <tbody>
+        <ng-container *ngFor="let planet of (planetsInfo | async), let i = index">
+            <tr>
+                <td>{{i + 1}}</td>
+                <td>{{planet.name}}</td>
+                <td>{{planet.rotation_period}}</td>
+                <td>{{planet.orbital_period}}</td>
+                <td>{{planet.diameter}}</td>
+                <td>{{planet.climate}}</td>
+                <td>{{planet.gravity}}</td>
+                <td>{{planet.terrain}}</td>
+                <td>{{planet.surface_water}}</td>
+                <td>{{planet.population}}</td>
+            </tr>
+        </ng-container>
+        </tbody>
+    </table>
+</div>
+<div class="table-wrapper" *ngIf="(planetsInfo | async) ? (planetsInfo | async).length === 0 : true">
+    Результаты не найдены
+</div>

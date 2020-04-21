@@ -1,0 +1,7 @@
+<app-search-panel
+        [filtersSuite]="filtersSuite"
+        (filtersValueChanged)="filtersValueChanged()"></app-search-panel>
+
+<app-tours-table
+        [columnNames]="columnNames"
+        [toursInfo]="toursInfo | async"></app-tours-table>

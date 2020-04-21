@@ -1,0 +1,39 @@
+<div class="filters-wrapper">
+    <div class="filters-block">
+        <div class="filter-name">Название планеты*:</div>
+        <div class="filter-block">
+            <input type="text" id="name-filter" [(ngModel)]="filtersSuite.textFilter" (ngModelChange)="filtersChanged()">
+        </div>
+        <div class="comment">* - Используйте латинские буквы</div>
+    </div>
+
+    <div class="filters-block">
+        <div class="filter-name">Диаметр планеты</div>
+        <div class="filter-block">
+            <label for="min-diameter-filter">Не менее: </label>
+            <input type="number" id="min-diameter-filter" class="number-filter" [(ngModel)]="filtersSuite.diameterFilterMin" (ngModelChange)="filtersChanged()" >
+        </div>
+        <div class="filter-block">
+            <label for="max-diameter-filter">Не более: </label>
+            <input type="number" id="max-diameter-filter" class="number-filter" [(ngModel)]="filtersSuite.diameterFilterMax" (ngModelChange)="filtersChanged()" >
+        </div>
+    </div>
+
+    <div class="filters-block">
+        <div class="filter-name">Население планеты</div>
+        <div class="filter-block">
+            <label for="min-population-filter">Не менее: </label>
+            <input type="number" id="min-population-filter" class="number-filter" [(ngModel)]="filtersSuite.populationFilterMin" (ngModelChange)="filtersChanged()" >
+        </div>
+        <div class="filter-block">
+            <label for="max-population-filter">Не более: </label>
+            <input type="number" id="max-population-filter" class="number-filter" [(ngModel)]="filtersSuite.populationFilterMax" (ngModelChange)="filtersChanged()" >
+        </div>
+    </div>
+
+    <div class="filters-block no-border">
+        <div class="filter-block">
+            <input type="button" id="reset-button" value="Сбросить фильтры" (click)="resetFilters()">
+        </div>
+    </div>
+</div>

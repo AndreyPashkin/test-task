@@ -1,0 +1,31 @@
+<h1>Тестовое задание</h1>
+
+<div class="tabs">
+    <h2  class="tab"
+         id="task1"
+         [ngClass]="{active: tabs.task1}"
+         (click)="!tabs.task1 ? selectTab($event) : null">
+        {{title1}}
+    </h2>
+    <h2  class="tab"
+         id="task2"
+         [ngClass]="{active: tabs.task2}"
+         (click)="!tabs.task2 ? selectTab($event) : null">
+        {{title2}}
+    </h2>
+</div>
+
+<div class="content-wrapper">
+
+    <ng-container *ngIf="tabs.task1">
+        <app-first-task></app-first-task>
+    </ng-container>
+
+    <ng-container *ngIf="tabs.task2">
+        <app-second-task></app-second-task>
+    </ng-container>
+
+</div>
+
+
+

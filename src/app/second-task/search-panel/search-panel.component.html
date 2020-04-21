@@ -1,0 +1,15 @@
+<div class="filters-wrapper">
+    <div class="filters-block">
+        <div class="filter-name">Название компании или тура*:</div>
+        <div class="filter-block">
+            <input type="text" id="text-filter" [(ngModel)]="filtersSuite.textFilter" (ngModelChange)="filtersChanged()">
+        </div>
+        <div class="comment">* - Используйте русские буквы</div>
+    </div>
+
+    <div class="filters-block no-border">
+        <div class="filter-block">
+            <input type="button" id="reset-button" value="Сбросить фильтр" (click)="resetFilters()">
+        </div>
+    </div>
+</div>

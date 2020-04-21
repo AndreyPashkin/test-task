@@ -1,0 +1,48 @@
+h1 {
+    font-size: 20px;
+    text-align: left;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.tabs {
+    margin: 0 0 0 15px;
+}
+
+.tab {
+    float: left;
+    background: #eee;
+    border: 1px solid #eee;
+    color: #555;
+    cursor: pointer;
+    margin: 0 1px 0 0;
+    text-align: center;
+    width: auto;
+}
+
+.tab:hover {
+    border: 1px solid #eee;
+    color: #33f;
+}
+
+.tab.active {
+    color: #00b;
+    cursor: auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-bottom: 2px solid #00f;
+}
+
+.content-wrapper {
+    min-width: 600px;
+    margin: 0 15px;
+    float: left;
+    border: 1px solid #ccc;
+    clear: both;
+}

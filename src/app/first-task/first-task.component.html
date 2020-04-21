@@ -1,0 +1,10 @@
+<div class="stats">
+    Всего планет в базе: {{planetsQty | async}}
+</div>
+<app-filters-panel
+        [filtersSuite]="filtersSuite"
+        (filtersValueChanged)="filtersValueChanged()"></app-filters-panel>
+
+<app-planets-table
+        [columnNames]="columnNames"
+        [planetsInfo]="planetsInfo"></app-planets-table>

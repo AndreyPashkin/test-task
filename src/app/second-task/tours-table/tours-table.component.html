@@ -1,0 +1,26 @@
+<div class="table-wrapper" *ngIf="toursInfo ? toursInfo.length > 0 : false">
+    <table class="tour-table">
+        <thead>
+        <tr>
+            <th>№</th>
+            <ng-container *ngFor="let columnName of columnNames">
+                <th>{{columnName}}</th>
+            </ng-container>
+        </tr>
+        </thead>
+        <tbody>
+        <ng-container *ngFor="let tour of toursInfo, let i = index">
+            <tr>
+                <td>{{i + 1}}</td>
+                <td>{{tour.id}}</td>
+                <td>{{tour.firm}}</td>
+                <td>{{tour.tour}}</td>
+                <td>{{tour.price}}</td>
+            </tr>
+        </ng-container>
+        </tbody>
+    </table>
+</div>
+<div class="table-wrapper" *ngIf="toursInfo ? toursInfo.length === 0 : true">
+    Результатов не найдено
+</div>

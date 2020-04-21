@@ -1,0 +1,44 @@
+.filters-wrapper {
+    clear: both;
+    float: left;
+    margin: 20px;
+}
+
+.filters-block {
+    float: left;
+    width: 300px;
+    border: 1px dashed #777;
+    margin: 0 10px 0 0;
+    height: 100px;
+    background: #eee;
+}
+
+.filter-block {
+    margin: 5px 10px;
+}
+
+.filter-name {
+    margin: 5px 10px;
+    font-weight: bold;
+}
+
+#text-filter {
+    padding: 5px;
+    width: 265px;
+}
+
+.no-border {
+    border: none;
+    width: auto;
+    background: none;
+}
+
+#reset-button {
+    padding: 15px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.comment {
+    margin: 10px 15px;
+}
